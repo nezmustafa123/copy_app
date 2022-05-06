@@ -11,7 +11,9 @@ const copyText = (e) => {
   //   coupon.cloneNode();
   //select the coupon and define where you want to start and end selection
 
-  navigator.clipboard.writeText(coupon.value);
+  navigator.clipboard
+    .writeText(coupon.value) //specify content to be copied
+    .then(() => {});
   btn.textContent = "Copied!";
   setTimeout(() => {
     btn.textContent = "Copy";
