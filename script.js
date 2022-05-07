@@ -13,11 +13,12 @@ const copyText = (e) => {
 
   navigator.clipboard
     .writeText(coupon.value) //specify content to be copied
-    .then(() => {});
-  btn.textContent = "Copied!";
-  setTimeout(() => {
-    btn.textContent = "Copy";
-  }, 3000);
+    .then(() => {
+      btn.textContent = "Copied!!";
+      setTimeout(() => {
+        btn.textContent = "Copy";
+      }, 3000);
+    });
 };
 
 btn.addEventListener("click", copyText);
